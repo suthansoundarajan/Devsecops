@@ -15,4 +15,3 @@ run-dast-job:
     artifacts:
       paths:
         - zap_updated_report.html
-Final
