@@ -1,0 +1,8 @@
+stages:
+    - runSASTusingSonarcloud
+
+run-sast-job:
+    stage: runSASTusingSonarcloud
+    image: maven:3.8.5-openjdk-11-slim
+    script: |
+      mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=gitlabdevsecops123 -Dsonar.projectKey=gitlabdevsecops123 -Dsonar.login=token01 
